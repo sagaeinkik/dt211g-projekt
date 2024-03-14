@@ -1,0 +1,24 @@
+@use 'animations';
+@use 'base' as b;
+
+body {
+    background-color: b.$light-bg;
+}
+
+header {
+    animation: fadeIn 4s;
+    position: relative;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+    #pagetitle {
+        font-family: b.$rubrik;
+        font-size: 5.5em;
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        color: white;
+    }
+}

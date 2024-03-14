@@ -1,14 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bokhyllan | DT211G</title>
+    <link rel="stylesheet" href="scss/main.scss">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@500&family=IBM+Plex+Sans:ital@0;1&family=IBM+Plex+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <p>Sup hoe</p>
+    <div class="wrapper">
+        <header>
+            <picture>
+                <!-- Ljus mobil -->
+                <source media="(prefers-color-scheme: light) and (max-width: 600px)"
+                    srcset="img/bokhyllanljus-liten.png?as=avif&width=600" type="image/avif">
+                <source media="(prefers-color-scheme: light) and (max-width: 600px)"
+                    srcset="img/bokhyllanljus-liten.png?as=webp&width=600" type="image/webp">
+                <source media="(prefers-color-scheme: light) and (max-width: 600px)"
+                    srcset="img/bokhyllanljus-liten.png?as=png&width=600" type="image/png">
+                <!-- Ljus medium -->
+                <source media="(prefers-color-scheme: light) and (max-width: 999px)"
+                    srcset="img/bokhyllanljus-liten.png?as=avif&width=1000" type="image/avif">
+                <source media="(prefers-color-scheme: light) and (max-width: 999px)"
+                    srcset="img/bokhyllanljus-liten.png?as=webp&width=1000" type="image/webp">
+                <source media="(prefers-color-scheme: light) and (max-width: 999px)"
+                    srcset="img/bokhyllanljus-liten.png?as=png&width=1000" type="image/png">
+                <!-- Ljus stor -->
+                <source media="(prefers-color-scheme: light) and (min-width: 1000px)"
+                    srcset="img/bokhyllanljus.png?as=avif&width=1000" type="image/avif">
+                <source media="(prefers-color-scheme: light) and (min-width: 1000px)"
+                    srcset="img/bokhyllanljus.png?as=webp&width=1000" type="image/webp">
+                <source media="(prefers-color-scheme: light) and (min-width: 1000px)"
+                    srcset="img/bokhyllanljus.png?as=png&width=2000" type="image/png">
+                <!-- Mörk mobil  -->
+                <source media="(prefers-color-scheme: dark) and (max-width: 600px)"
+                    srcset="img/bokhyllandark-liten.png?as=avif&width=600" type="image/avif">
+                <source media="(prefers-color-scheme: dark) and (max-width: 600px)"
+                    srcset="img/bokhyllandark-liten.png?as=webp&width=600" type="image/webp">
+                <source media="(prefers-color-scheme: dark) and (max-width: 600px)"
+                    srcset="img/bokhyllandark-liten.png?as=png&width=600" type="image/png">
+                <!-- Mörk medium -->
+                <source media="(prefers-color-scheme: dark) and (max-width: 999px)"
+                    srcset="img/bokhyllandark-liten.png?as=avif&width=1000" type="image/avif">
+                <source media="(prefers-color-scheme: dark) and (max-width: 999px)"
+                    srcset="img/bokhyllandark-liten.png?as=webp&width=1000" type="image/webp">
+                <source media="(prefers-color-scheme: dark) and (max-width: 999px)"
+                    srcset="img/bokhyllandark-liten.png?as=png&width=1000" type="image/png">
+                <!-- Mörk stor -->
+                <source media="(prefers-color-scheme: dark) and (min-width: 1000px)"
+                    srcset="img/bokhyllandark.png?as=avif&width=2000" type="image/avif">
+                <source media="(prefers-color-scheme: dark) and (min-width: 1000px)"
+                    srcset="img/bokhyllandark.png?as=webp&width=2000" type="image/webp">
+                <source media="(prefers-color-scheme: dark) and (min-width: 1000px)"
+                    srcset="img/bokhyllandark.png?as=png&width=2000" type="image/png">
+                <img src="img/bokhyllanljus.png" alt="Renderad bild av uppslagen bok med olika växtslag från sidorna">
+            </picture>
+            <p id="pagetitle">Bokhyllan</p>
+        </header>
+    </div>
+    <footer>
+        <p id="credits">Jag har gjort denna osv</p>
+    </footer>
 </body>
 
 </html>
