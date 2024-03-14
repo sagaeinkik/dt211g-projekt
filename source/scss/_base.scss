@@ -4,7 +4,7 @@ $dark-bg: #2c2424;
 $dark-beige: #e1c58d;
 //gemensamma färger
 $turq: #638889;
-$green: 9DBC98;
+$green: #9dbc98;
 //Light mode
 $light-bg: #f9efdb;
 $light-beige: #ebd9b4;
@@ -17,9 +17,9 @@ $sans: 'IBM Plex Sans', Arial, Helvetica, sans-serif;
 
 /* Mixins */
 @mixin transition {
-    transition: 0.8s ease;
-    -webkit-transition: 0.8s ease;
-    -moz-transition: 0.8s ease;
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
 }
 
 @mixin center($horizontal, $vertical) {

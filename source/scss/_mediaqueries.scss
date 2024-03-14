@@ -1,0 +1,46 @@
+@use 'base' as b;
+
+@media (max-width: 1000px) {
+    header #pagetitle {
+        font-size: 4em;
+    }
+
+    main {
+        .searchfield {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    header #pagetitle {
+        font-size: 2.8em;
+        right: 5%;
+    }
+    main {
+        font-size: 0.85rem;
+        width: 100%;
+        padding: 1em;
+        .searchfield {
+            margin: 1em auto;
+            width: 100%;
+        }
+        .searchfield input {
+            width: 80%;
+            padding: 0.5em 0.6em;
+            font-size: 0.9em;
+        }
+        .searchfield button {
+            margin-left: 0;
+            padding: 0.5em 0.6em;
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media (max-width: 240px) {
+    header #pagetitle {
+        font-size: 2em;
+        right: 5%;
+    }
+}
