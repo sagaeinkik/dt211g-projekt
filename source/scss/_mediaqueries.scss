@@ -4,7 +4,13 @@
     body {
         background-color: b.$dark-bg;
     }
+    p.intro {
+        color: white;
+    }
 
+    main .searchfield input::placeholder {
+        color: b.$green;
+    }
     main .searchfield button {
         background-color: b.$green;
         color: white;
