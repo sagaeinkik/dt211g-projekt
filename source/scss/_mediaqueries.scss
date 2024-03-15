@@ -1,5 +1,50 @@
 @use 'base' as b;
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: b.$dark-bg;
+    }
+
+    main .searchfield button {
+        background-color: b.$green;
+        color: white;
+
+        &:hover {
+            background-color: lighten(b.$green, 20%);
+            color: black;
+        }
+    }
+    div.titlegrid {
+        color: white;
+
+        div.bookinfo h1 {
+            color: b.$dark-beige;
+        }
+    }
+    div.presentation {
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        box-shadow: none;
+    }
+    div.presentation h2 {
+        color: b.$dark-beige;
+    }
+
+    footer {
+        background-color: b.$green;
+    }
+
+    div.searchgrid div.card {
+        background-color: darken(b.$dark-bg, 3%);
+        color: white;
+
+        &:hover {
+            color: black;
+            background-color: b.$dark-beige;
+        }
+    }
+}
+
 @media (max-width: 1000px) {
     header #pagetitle {
         font-size: 4em;
@@ -8,6 +53,52 @@
     main {
         .searchfield {
             max-width: 100%;
+        }
+    }
+    div.searchgrid {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div.titlegrid {
+        width: 100%;
+    }
+    div.presentation {
+        width: 100%;
+    }
+}
+
+@media (max-width: 599px) {
+    div.searchgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    div.titlegrid {
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: 'bild bokinfo bokinfo';
+
+        div.fleximg {
+            grid-area: bild;
+            img {
+                width: 60%;
+            }
+        }
+
+        div.bookinfo {
+            grid-area: bokinfo;
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+    div.presentation p {
+        font-size: 0.9em;
+    }
+    div.presentation h2 {
+        font-size: 1.5em;
+
+        &:first-child {
+            margin-top: 0.6em;
         }
     }
 }
@@ -36,11 +127,40 @@
             font-size: 0.9em;
         }
     }
+    div.searchgrid {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        div.card img {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    div.titlegrid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        div.fleximg img {
+            width: 40%;
+            margin-bottom: 1.5em;
+        }
+
+        div.bookinfo {
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: 240px) {
     header #pagetitle {
         font-size: 2em;
         right: 5%;
+    }
+    main .searchfield input {
+        width: 70%;
     }
 }
