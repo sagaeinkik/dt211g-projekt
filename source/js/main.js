@@ -258,9 +258,7 @@ function showBook(book) {
     aboutHeadline.appendChild(headlineText);
     textContent.appendChild(aboutHeadline);
 
-    //skapa extract-biten:
-    const extractP = document.createElement('p');
-    extractP.classList.add('no-top-margin');
+    //skapa extract-biten genom att anropa funktion
     fetchExtract(abtBook.authors, textContent);
 }
 
