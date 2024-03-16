@@ -1,3 +1,4 @@
+//För vanlig fadein
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -10,6 +11,7 @@
     }
 }
 
+//För lite fördröjd fadein som sker snabbare
 @keyframes delayFadeIn {
     0% {
         opacity: 0;
@@ -19,14 +21,5 @@
     }
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        top: 300px;
-    }
-    100% {
-        top: 0;
     }
 }

@@ -6,6 +6,7 @@ const searchButton = document.getElementById('btn'); //Sökknappen
 const content = document.querySelector('div.content'); //Tom div i vilken man petar in saker i
 import defaultbild from '../img/provbild.jpg'; //grå bild (importeras eftersom parcel komprimerar med random siffertillägg)
 
+//Göm api-nyckeln tydligen
 require('dotenv').config();
 const key = process.env.API_KEY;
 

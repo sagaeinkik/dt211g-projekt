@@ -1,5 +1,6 @@
 @use 'base' as b;
 
+/* VID DARK MODE, ändra färger */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: b.$dark-bg;
@@ -55,11 +56,13 @@
     }
 }
 
+/* QUERIES FÖR SKÄRMBREDDER */
 @media (max-width: 1000px) {
+    /* Justera storlek på sidnamnet */
     header #pagetitle {
         font-size: 4em;
     }
-
+    /* Bredda saker */
     main {
         .searchfield {
             max-width: 100%;
@@ -78,6 +81,7 @@
     }
 }
 
+/* Gör om grid till 2x istället för 4x, justera textstorlekar */
 @media (max-width: 599px) {
     div.searchgrid {
         grid-template-columns: repeat(2, 1fr);
@@ -110,6 +114,7 @@
     }
 }
 
+/* Justera textstorlekar, bredda det som går, ta bort grid och gör sökresultat till flex istället */
 @media (max-width: 430px) {
     header #pagetitle {
         font-size: 2.8em;
@@ -142,6 +147,7 @@
     }
 }
 
+/* Gör titelgrid till flex */
 @media (max-width: 350px) {
     div.titlegrid {
         width: 100%;
@@ -159,6 +165,7 @@
     }
 }
 
+/* Justera textstorlekar och positioner */
 @media (max-width: 240px) {
     header #pagetitle {
         font-size: 2em;

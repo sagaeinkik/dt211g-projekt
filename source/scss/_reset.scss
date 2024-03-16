@@ -1,5 +1,6 @@
 @use 'base' as b;
 
+/* Universalt tar bort allt */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@
     position: relative;
 }
 
+/* Maxbredder och ta bort överflöd, andra tumregler */
 body {
     max-width: 2000px;
     margin: auto;
@@ -21,6 +23,7 @@ body {
     line-height: 1.9;
 }
 
+/* Maxbredd på textinnehåll för läslighet */
 main div.text-content {
     max-width: 35em;
     margin: auto;
