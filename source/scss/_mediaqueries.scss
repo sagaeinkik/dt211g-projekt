@@ -31,6 +31,10 @@
         background-color: rgba(0, 0, 0, 0);
         color: white;
         box-shadow: none;
+
+        p.textsnippet {
+            color: b.$dark-beige;
+        }
     }
     div.presentation h2 {
         color: b.$dark-beige;

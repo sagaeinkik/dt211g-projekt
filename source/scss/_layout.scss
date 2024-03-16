@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    /* animation: fadeIn 3s; */
+    animation: fadeIn 3s;
     position: relative;
 
     img {
@@ -16,7 +16,7 @@ header {
     }
     #pagetitle {
         font-family: b.$rubrik;
-        /* animation: delayFadeIn 4s; */
+        animation: delayFadeIn 3.7s;
         font-size: 6em;
         position: absolute;
         bottom: 7%;
@@ -30,7 +30,6 @@ main {
     width: 80%;
     margin: auto;
     min-height: 50vh;
-    /* border: 1px solid black; */
 
     .searchfield {
         position: relative;
@@ -38,7 +37,7 @@ main {
         max-width: 66%;
 
         input {
-            /* animation: delayFadeIn 5.3s; */
+            animation: delayFadeIn 5.3s;
             width: 80%;
             font-size: 1em;
             font-family: b.$sans;
@@ -54,7 +53,7 @@ main {
         }
 
         button {
-            /* animation: delayFadeIn 5.3s; */
+            animation: delayFadeIn 5.3s;
             border: none;
             border-radius: 10px;
             background-color: b.$turq;
@@ -74,7 +73,7 @@ main {
         }
     }
     p.intro {
-        /* animation: delayFadeIn 8s; */
+        animation: delayFadeIn 8s;
         text-align: center;
     }
 }
@@ -113,6 +112,7 @@ div.searchgrid {
         p.author {
             font-style: italic;
             padding-left: 0.5em;
+            margin-top: 0.5em;
         }
     }
 }
@@ -138,6 +138,7 @@ div.titlegrid {
         font-family: b.$rubrik;
         font-size: 2.5em;
         color: b.$turq;
+        line-height: 1.3;
     }
     div.bookinfo p {
         font-size: 0.9em;
@@ -157,6 +158,13 @@ div.presentation {
         margin: 1.5em auto 0;
         font-size: 1.8em;
         color: b.$turq;
+    }
+
+    p.textsnippet {
+        font-style: italic;
+        margin: 3em auto;
+        color: b.$turq;
+        font-size: 1.1em;
     }
 }
 
