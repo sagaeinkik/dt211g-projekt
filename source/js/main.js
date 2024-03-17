@@ -259,7 +259,13 @@ function showBook(book) {
     textContent.appendChild(aboutHeadline);
 
     //skapa extract-biten genom att anropa funktion
-    fetchExtract(abtBook.authors, textContent);
+    if (abtBook.authors) {
+        fetchExtract(abtBook.authors, textContent);
+    } else {
+        const extractEl = document.createElement('p');
+        extractEl.classList.add('no-top-margin');
+        extractEl.innerHTML = 'Ingen författare listad';
+    }
 }
 
 //Funktion som hämtar info om författare från wikipedia API
