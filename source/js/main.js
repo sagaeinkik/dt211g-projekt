@@ -23,7 +23,7 @@ searchButton.addEventListener('click', () => {
 //liten funktion som avkodar snippets med hjälp av textarea
 function decodeHTMLEntities(text) {
     const textarea = document.createElement('textarea');
-    textarea.innerHTML = text;
+    textarea.innerHTML = text.replace(/<[^>]*>/g, '');
     return textarea.value;
 }
 
@@ -201,10 +201,12 @@ function showBook(book) {
         bookInfo.innerHTML += `<p>${abtBook.publisher}</p>`;
     }
     //Lägg till resten av informationen
-    bookInfo.innerHTML += `
-    <p>${abtBook.pageCount} sidor</p>
-    <p>ISBN: ${abtBook.industryIdentifiers[0].identifier}</p>
-    `;
+    if (abtBook.pageCount && abtBook.industryIdentifiers) {
+        bookInfo.innerHTML += `
+        <p>${abtBook.pageCount} sidor</p>
+        <p>ISBN: ${abtBook.industryIdentifiers[0].identifier}</p>
+        `;
+    }
 
     //Peta in i DOM
     titleGrid.appendChild(bookInfo);
@@ -252,10 +254,17 @@ function showBook(book) {
         textContent.appendChild(snippet);
     }
 
-    //Skapa om författaren-rubrik
+    //Skapa om författaren-rubrik (om det finns en)
     const aboutHeadline = document.createElement('h2');
-    const headlineText = document.createTextNode(`Om ${abtBook.authors[0]}`);
-    aboutHeadline.appendChild(headlineText);
+    if (abtBook.authors) {
+        const headlineText = document.createTextNode(
+            `Om ${abtBook.authors[0]}`
+        );
+        aboutHeadline.appendChild(headlineText);
+    } else {
+        const headlineText = document.createTextNode('Om författaren');
+        aboutHeadline.appendChild(headlineText);
+    }
     textContent.appendChild(aboutHeadline);
 
     //skapa extract-biten genom att anropa funktion
@@ -264,7 +273,8 @@ function showBook(book) {
     } else {
         const extractEl = document.createElement('p');
         extractEl.classList.add('no-top-margin');
-        extractEl.innerHTML = 'Ingen författare listad';
+        extractEl.innerHTML = 'Det finns ingenting att visa här.';
+        textContent.appendChild(extractEl);
     }
 }
 
